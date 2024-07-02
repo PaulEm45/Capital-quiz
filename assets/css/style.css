@@ -1,4 +1,25 @@
 h1 {
     color: blue;
     text-align: center;
+    padding: 2px;
+}
+
+body {
+    background: cadetblue;
+    }
+nav {
+    color: blue;
+    text-align: center;
+    padding: 2px;
+}
+h2 {
+    color: yellow;
+    text-align: center;
+    padding: 2px;
+}
+
+h3 {
+    color: blue;
+    text-align: center;
+    padding: 2px;
 }
