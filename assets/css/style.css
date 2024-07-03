@@ -1,25 +1,39 @@
+
 h1 {
     color: blue;
+    font-family: "Quicksand", sans-serif;
     text-align: center;
     padding: 2px;
 }
 
-body {
-    background: cadetblue;
-    }
-nav {
+img {
     color: blue;
+    
+}
+
+body {
+    background: white;
+    font-family: "Quicksand", sans-serif;
+}
+
+nav {
+    color: red;
+    font-family: "Quicksand", sans-serif;
     text-align: center;
     padding: 2px;
 }
+
 h2 {
-    color: yellow;
+    color: darkolivegreen;
+    font-family: "Quicksand", sans-serif;
     text-align: center;
     padding: 2px;
 }
 
 h3 {
     color: blue;
+    font-family: "Quicksand", sans-serif;
     text-align: center;
     padding: 2px;
 }
+
