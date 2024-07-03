@@ -5,6 +5,7 @@ const answersElement = document.getElementById('answers');
 const scoreAreaElement = document.getElementById('score-area');
 const scorePointsElement = document.getElementById('score-points');
 
+
 let randomQuestions, currentQuestionIndex;
 
 nextButton.addEventListener('click', () => {
@@ -13,7 +14,6 @@ nextButton.addEventListener('click', () => {
 });
 
 function startGame() {
-    startButton.classlList.add('hide');
     randomQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     questionElement.classList.remove('hide');
