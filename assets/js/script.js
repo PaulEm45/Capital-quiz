@@ -20,4 +20,18 @@ function startGame() {
     scoreArea.classList.remove('hide');
     setNextQuestion();
     scorePointsElement.textContent = 0;
+};
+
+function setNextQuestion() {
+    resetState();
+    showQuestion(randomQuestions[currentQuestionIndex]);
+};
+
+function showQuestion(question) {
+    questionElement.innerText = question.question;
+    question.answers.forEach(answersElement => {
+        const button = document.createElement('button');
+        button.innerText = answers.textContent;
+        
+    });
 }
