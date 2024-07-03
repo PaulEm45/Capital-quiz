@@ -17,7 +17,7 @@ body {
 }
 
 nav {
-    color: red;
+    color: blue;
     font-family: "Quicksand", sans-serif;
     text-align: center;
     padding: 2px;
@@ -65,6 +65,8 @@ h3 {
     height: auto;
     margin: auto;
     object-position: 40%;
+    border-radius: 3px;
+    border-color: blue;
     font-family: "Quicksand", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -72,6 +74,10 @@ h3 {
     color: blue;
 }
 
-.q1, .q2, .q3, .q4, .q5, .q6, .q7 {
+.btn--gray::after{
+    content: attr(data-type);
+}
+
+.q1, .q2, .q3, .q4, .q5, .q6, .q7, .score-area {
     text-align: center;
 }
