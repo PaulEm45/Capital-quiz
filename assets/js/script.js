@@ -29,9 +29,23 @@ function setNextQuestion() {
 
 function showQuestion(question) {
     questionElement.innerText = question.question;
-    question.answers.forEach(answersElement => {
+    question.answers.forEach(answers => {
         const button = document.createElement('button');
-        button.innerText = answers.textContent;
+        button.innerText = answers.text;
+        button.classList.add('btn');
+        if (answers.correct) {
+            button.dataset.correct = answers.correct;
+        }
+        button.addEventListener('click', selectAnswers);
+        answersElement.appendChild(button)
         
-    });
-}
+    })
+};
+
+function resetState() {
+    clearStatusClass(document.body);
+    nextButton.classList.add('hide');
+    while (answersElement.firstChild) {
+        answersElement.removeChild(answersElement.firstChild)
+    }
+};
