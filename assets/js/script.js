@@ -8,13 +8,13 @@ const scorePointsElement = document.getElementById('score-points');
 let randomQuestions, currentQuestionIndex;
 
 nextButton.addEventListener('click', () => {
-  currentQuestionIndex++
-  setNextQuestion()
+    currentQuestionIndex++
+    setNextQuestion()
 });
 
 function startGame() {
     startButton.classlList.add('hide');
-    randomQuestions = questions.sort(() => Math.random() - .5 );
+    randomQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     questionElement.classList.remove('hide');
     scoreArea.classList.remove('hide');
@@ -38,7 +38,7 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswers);
         answersElement.appendChild(button)
-        
+
     })
 };
 
@@ -52,18 +52,19 @@ function resetState() {
 
 function selectAnswers(e) {
     const selectedButton = e.target;
-    const correct =selectedButton.dataset.correct;
+    const correct = selectedButton.dataset.correct;
 
     processResults(correct);
     setStatusClass(document.body, correct);
 
     Array.from(answersElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
-})
+    })
 
-if (randomQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove('hide');
-    } else { nextButton.innerText = 'Restart';
+    if (randomQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide');
+    } else {
+        nextButton.innerText = 'Restart';
         nextButton.classList.remove('hide');
     }
 };
@@ -71,18 +72,18 @@ if (randomQuestions.length > currentQuestionIndex + 1) {
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
-      element.classList.add('correct');
+        element.classList.add('correct');
     } else {
-      element.classList.add('wrong');
+        element.classList.add('wrong');
     }
-  };
-  
-  function clearStatusClass(element) {
+};
+
+function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
-  };
+};
 
-  let questions = [{
+let questions = [{
     question: 'What is the capital of France?',
     answers: [{
         text: 'Prague',
@@ -96,8 +97,8 @@ function setStatusClass(element, correct) {
         text: 'Pristina',
         correct: false
     },
-]
-  },
+    ]
+},
 {
     question: 'What is the capital of Luxembourg?',
     answers: [{
@@ -134,7 +135,7 @@ function setStatusClass(element, correct) {
     question: 'What is the capital of Japan?',
     answers: [{
         text: 'Kyoto',
-        correct: false  
+        correct: false
     },
     {
         text: 'Nara',
@@ -195,3 +196,13 @@ function setStatusClass(element, correct) {
     ]
 },
 ];
+
+function processResults(isCorrect) {
+    if (!isCorrect) {
+        return;
+    }
+
+    const scorePoints = parse(scorePointsElement.textContent, 1) || 0;
+
+    scorePointsElement.textContent = scorePoints + 1;
+}
