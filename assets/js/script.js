@@ -81,3 +81,117 @@ function setStatusClass(element, correct) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
   };
+
+  let questions = [{
+    question: 'What is the capital of France?',
+    answers: [{
+        text: 'Prague',
+        correct: false
+    },
+    {
+        text: 'Paris',
+        correct: true
+    },
+    {
+        text: 'Pristina',
+        correct: false
+    },
+]
+  },
+{
+    question: 'What is the capital of Luxembourg?',
+    answers: [{
+        text: 'Bonn',
+        correct: false
+    },
+    {
+        text: 'Lima',
+        correct: false
+    },
+    {
+        text: 'Luxembourg',
+        correct: true
+    },
+    ]
+},
+{
+    question: 'What is the capital of Canada?',
+    answers: [{
+        text: 'Toronto',
+        correct: false
+    },
+    {
+        text: 'Ottawa',
+        correct: true
+    },
+    {
+        text: 'Vancouver',
+        correct: false
+    },
+    ]
+},
+{
+    question: 'What is the capital of Japan?',
+    answers: [{
+        text: 'Kyoto',
+        correct: false  
+    },
+    {
+        text: 'Nara',
+        correct: false
+    },
+    {
+        text: 'Tokyo',
+        correct: true
+    },
+    ]
+},
+{
+    question: 'What is the capital of Albania?',
+    answers: [{
+        text: 'Tirana',
+        correct: true
+    },
+    {
+        text: 'Tbilisi',
+        correct: false
+    },
+    {
+        text: 'Tunis',
+        correct: false
+    },
+    ]
+},
+{
+    question: 'What is the capital of Denmark?',
+    answers: [{
+        text: 'Canberra',
+        correct: false
+    },
+    {
+        text: 'Copenhagen',
+        correct: true
+    },
+    {
+        text: 'Cairo',
+        correct: false
+    },
+    ]
+},
+{
+    question: 'What is the capital of England?',
+    answers: [{
+        text: 'Leeds',
+        correct: false
+    },
+    {
+        text: 'Liverpool',
+        correct: false
+    },
+    {
+        text: 'London',
+        correct: true
+    },
+    ]
+},
+];
