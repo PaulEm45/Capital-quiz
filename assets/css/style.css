@@ -37,3 +37,41 @@ h3 {
     padding: 2px;
 }
 
+.game-area {
+    background-color: #E6ECF0;
+    box-sizing: border-box;
+    width: 85%;
+    height: auto;
+    max-height: auto;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+.score-area {
+    margin: 5px auto;
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+.scores {
+    display: inline-block;
+    padding: 25px;
+}
+
+.btn {
+    width: auto;
+    height: auto;
+    margin: auto;
+    object-position: 40%;
+    font-family: "Quicksand", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    display: inline-block;
+    color: blue;
+}
+
+.q1, .q2, .q3, .q4, .q5, .q6, .q7 {
+    text-align: center;
+}
