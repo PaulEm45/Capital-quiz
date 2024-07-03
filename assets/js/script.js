@@ -49,3 +49,35 @@ function resetState() {
         answersElement.removeChild(answersElement.firstChild)
     }
 };
+
+function selectAnswers(e) {
+    const selectedButton = e.target;
+    const correct =selectedButton.dataset.correct;
+
+    processResults(correct);
+    setStatusClass(document.body, correct);
+
+    Array.from(answersElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+})
+
+if (randomQuestions.length > currentQuestionIndex + 1) {
+    nextButton.classList.remove('hide');
+    } else { nextButton.innerText = 'Restart';
+        nextButton.classList.remove('hide');
+    }
+};
+
+function setStatusClass(element, correct) {
+    clearStatusClass(element);
+    if (correct) {
+      element.classList.add('correct');
+    } else {
+      element.classList.add('wrong');
+    }
+  };
+  
+  function clearStatusClass(element) {
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
+  };
