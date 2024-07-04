@@ -1,4 +1,4 @@
-const nextButton = document.getElementById('next-btn');
+const nextButton = document.getElementById('next');
 const questionBoxElement = document.getElementById('question-box');
 const questionElement = document.getElementById('question');
 const answersElement = document.getElementById('answers');
@@ -8,16 +8,18 @@ const scorePointsElement = document.getElementById('score-points');
 
 let randomQuestions, currentQuestionIndex;
 
+nextButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion()
+    currentQuestionIndex++;
+    setNextQuestion();
 });
 
 function startGame() {
+    nextButton.classList.add('hide');
     randomQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     questionElement.classList.remove('hide');
-    scoreArea.classList.remove('hide');
+    scoreAreaElement.classList.remove('hide');
     setNextQuestion();
     scorePointsElement.textContent = 0;
 };
@@ -202,7 +204,7 @@ function processResults(isCorrect) {
         return;
     }
 
-    const scorePoints = parse(scorePointsElement.textContent, 1) || 0;
+    const scorePoints = parseInt(scorePointsElement.textContent, 10) || 0;
 
-    scorePointsElement.textContent = scorePoints + 1;
+    scorePointsElement.textContent = scorePoints + 10;
 }
