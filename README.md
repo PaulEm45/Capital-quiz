@@ -78,7 +78,7 @@
 
 <h3>Via Gitpod</h3>
 
-<p></p>
+<p>The site is available via https://paulem45-capitalquiz-l1hquqnpek7.ws.codeinstitute-ide.net/ </p>
 
 <h3>Via Github pages</h3>
 
@@ -86,7 +86,7 @@
     1.In the GitHub repository, navigate to the Settings tab
     2.From the source section drop-down menu, select the Master Branch
     3.Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-    4.The live link is </p>
+    4.The live link is https://github.com/PaulEm45/Capital-quiz.git</p>
 
 <h2>Credits</h2>
 
